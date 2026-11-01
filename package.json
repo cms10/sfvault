@@ -1,0 +1,36 @@
+{
+  "name": "sfvault",
+  "version": "0.1.0",
+  "description": "App to easily store and recover Salesforce org connections",
+  "main": "index.js",
+  "engines": { "node": ">=18.3.0" },
+  "repository": { "type": "git", "url": "git+https://github.com/cms10/sfvault.git" },
+  "bugs": { "url": "https://github.com/cms10/sfvault/issues" },
+  "homepage": "https://github.com/cms10/sfvault#readme",
+  "files": ["index.js", "modules", "helpers", "assets"],
+  "bin": {
+    "sfvault": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "salesforce",
+    "org",
+    "auth",
+    "connection",
+    "sf",
+    "vault",
+    "authorization",
+    "authentication"
+  ],
+  "author": "csaramagaio",
+  "license": "ISC",
+  "dependencies": {
+    "hash-wasm": "^4.12.0",
+    "kdbxweb": "^2.1.1"
+  },
+  "overrides": {
+    "@xmldom/xmldom": "^0.8.15"
+  }
+}

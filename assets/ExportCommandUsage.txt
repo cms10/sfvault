@@ -1,0 +1,19 @@
+Usage: sfvault export --file <path> [--target-org <pattern>] [--hide-production-auth-url]
+
+Options:
+  -f, --file <path>                 Password manager file to create or update. The extension
+                                    may be omitted; it is added by the password manager
+                                    (KeePass: .kdbx). Existing orgs are updated by username.
+  -o, --target-org <pattern>        Export only orgs whose alias matches the pattern
+                                    (username is used for orgs without alias).
+                                    "*" matches any characters; matching is case-insensitive.
+                                      company-qa    exactly company-qa
+                                      "dev-*"    starts with dev-
+                                      "*uat*"   contains uat
+                                    Quote patterns containing "*" (required on macOS/Linux).
+  -p, --hide-production-auth-url    Do not store auth URLs for production orgs; they are
+                                    saved with loginMethod "web" and re-authenticated
+                                    through the browser on restore
+
+You are asked for the password manager's master password. When the file does not
+exist yet, a new one is created and the password is asked twice.

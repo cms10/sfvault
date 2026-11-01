@@ -1,0 +1,19 @@
+Usage: sfvault restore --file <path> [--target-org <pattern>]
+
+Options:
+  -f, --file <path>             Password manager file. The extension may be omitted:
+                                "<path>.kdbx" is tried first, then "<path>" as given.
+                                You are asked to confirm the file before it is opened.
+  -o, --target-org <pattern>    Restore only orgs whose alias matches the pattern
+                                (username is used for orgs without alias).
+                                "*" matches any characters; matching is case-insensitive.
+                                  company-qa    exactly company-qa
+                                  "dev-*"       starts with dev-
+                                  "*uat*"       contains uat
+                                Quote patterns containing "*" (required on macOS/Linux).
+                                Without this option you are asked whether to restore
+                                all stored orgs.
+
+Before connecting, the selected orgs are listed and you are asked to confirm.
+Orgs with an auth URL are connected automatically; orgs stored for web login
+open the browser, one at a time, so you can complete the login there.

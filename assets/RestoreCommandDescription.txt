@@ -1,0 +1,1 @@
+Log in to all orgs stored in a password manager file
