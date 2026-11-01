@@ -1,0 +1,1 @@
+Save all authenticated orgs into a password manager file
